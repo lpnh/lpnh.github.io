@@ -1,7 +1,6 @@
 [build]
 release = true
 dist = "release"
-filehash = false
 
 [clean]
 dist = "release"

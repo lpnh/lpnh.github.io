@@ -161,6 +161,14 @@ You can see a `Trunk.toml` config file example [here](https://github.com/trunk-r
 
 ## Run
 
+Install `cargo-make`:
+
 ```no_rust
-trunk serve --open
+sudo pacman -S cargo-make
+```
+
+Run in development mode:
+
+```no_rust
+cargo make run-dev
 ```

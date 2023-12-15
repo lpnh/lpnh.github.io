@@ -3,6 +3,7 @@
 Cargo.lock
 
 /dist
+/release
 /style/output.css
 
 tailwindcss

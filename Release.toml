@@ -1,0 +1,13 @@
+[build]
+release = true
+dist = "release"
+filehash = false
+
+[clean]
+dist = "release"
+cargo = true
+
+[[hooks]]
+stage = "pre_build"
+command = "sh"
+command_arguments = ["-c", "./tailwindcss -i input.css -o style/output.css", "--minify"]

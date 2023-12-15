@@ -1,7 +1,7 @@
-
 /target/
 Cargo.lock
 
+/public
 /dist
 /release
 /style/output.css

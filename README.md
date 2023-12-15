@@ -34,14 +34,11 @@ mv tailwindcss-linux-x64 tailwindcss
 
 ### Assets
 
-Create new `public` and `style` directories:
+Create new `public` directory for storing `favicon.ico`
 
 ```no_rust
 mkdir public
-mkdir style
 ```
-
-The former for storing `favicon.ico`, etc. The latter for the tailwind css file output.
 
 ### Makefile
 

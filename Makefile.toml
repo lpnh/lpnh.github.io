@@ -16,11 +16,11 @@ args = ["clean", "--config", "Release.toml"]
 
 [tasks.build-release]
 command = "trunk"
-args = ["build", "--config", "Release.toml", "--public-url", "/home/"]
+args = ["build", "--config", "Release.toml", "--public-url", "/lpnh.github.io/"]
 
 [tasks.add-public-files]
-command = "cp"
-args = ["-r", "./public/aux/*", "./release/"]
+command = "sh"
+args = ["-c", "cp -r public/aux/* release/"]
 
 [tasks.run-dev]
 run_task = { name = ["clean-css", "clean-dist", "serve-dist"] }

@@ -58,7 +58,7 @@ fn Home() -> impl IntoView {
             </div>
             // Contact
             <div class="md:mb-16 mb-10 md:w-96">
-                <h3 class="md:text-lg text-base">"contact"</h3>
+                <h3 class="md:text-lg text-base">"Contact"</h3>
                 <div class="mt-4 flex flex-row justify-around items-center space-x-6">
                     <a href="https://github.com/lpnh" target="_blank" class="justify-center items-center flex flex-col space-y-2 md:hover:text-rose-400 active:text-rose-400 transition-colors duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">

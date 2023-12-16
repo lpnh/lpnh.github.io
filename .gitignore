@@ -1,9 +1,7 @@
-/target/
+/target
 Cargo.lock
 
-/public
 /dist
-/release
 /style/output.css
 
 tailwindcss

@@ -4,22 +4,30 @@ args = ["-f", "style/output.css"]
 
 [tasks.clean-dist]
 command = "trunk"
-args = ["clean", "--config", "Dev.toml", "--verbose"]
+args = ["clean", "--config", "Dev.toml"]
 
 [tasks.serve-dist]
 command = "trunk"
-args = ["serve", "--config", "Dev.toml", "--verbose"]
+args = ["serve", "--config", "Dev.toml"]
 
 [tasks.clean-release]
 command = "trunk"
-args = ["clean", "--config", "Release.toml", "--verbose"]
+args = ["clean", "--config", "Release.toml"]
 
 [tasks.build-release]
 command = "trunk"
-args = ["build", "--config", "Release.toml", "--verbose"]
+args = ["build", "--config", "Release.toml", "--public-url", "/home/"]
+
+[tasks.add-public-files]
+command = "cp"
+args = ["-r", "./public/aux/*", "./release/"]
 
 [tasks.run-dev]
 run_task = { name = ["clean-css", "clean-dist", "serve-dist"] }
 
 [tasks.run-release]
-run_task = { name = ["clean-css", "clean-release", "build-release"] }
+run_task = { name = ["clean-css", "clean-release", "build-release", "add-public-files"] }
+
+[tasks.update-pages]
+command = "git"
+args = ["subtree", "push", "--prefix", "release", "origin", "gh-pages"]

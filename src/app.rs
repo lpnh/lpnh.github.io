@@ -5,7 +5,7 @@ pub fn App() -> impl IntoView {
     view! {
         <div class="font-fira-mono flex flex-col bg-stone-950 min-h-screen text-base text-center text-gray-300">
             <div class="flex-1 flex flex-col items-center">
-                <div class="flex flex-1 md:pt-8 pt-6 md-8 md:pb-8 pb-12 md:w-full md:max-w-4xl justify-center">            
+                <div class="flex flex-1 md:pt-8 pt-6 md-8 md:pb-8 pb-12 md:w-full md:max-w-4xl justify-center">
                     <Home/>
                 </div>
                 <Footer/>
@@ -32,7 +32,7 @@ fn Home() -> impl IntoView {
             >
                 <div class="flex md:flex-row flex-col justify-center items-center md:items-end md:space-x-12 space-x-0 md:space-y-0 space-y-12 transition-colors duration-200">
                     <a
-                        class="flex flex-col items-center space-y-4 md:hover:text-orange-400 active:text-orange-400 transition-colors duration-200"
+                        class="flex flex-col items-center space-y-4 md:hover:text-rose-400 active:text-rose-400 transition-colors duration-200"
                         href="/blog"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 512 512">
@@ -44,7 +44,7 @@ fn Home() -> impl IntoView {
                         </div>
                     </a>
                     <a
-                        class="flex flex-col items-center space-y-4 md:hover:text-orange-400 active:text-orange-400 transition-colors duration-200"
+                        class="flex flex-col items-center space-y-4 md:hover:text-rose-400 active:text-rose-400 transition-colors duration-200"
                         href="https://veredas.shuttleapp.rs/"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 512 512">
@@ -56,7 +56,7 @@ fn Home() -> impl IntoView {
                         </div>
                     </a>
                     <a
-                        class="flex flex-col items-center space-y-4 md:hover:text-orange-400 active:text-orange-400 transition-colors duration-200"
+                        class="flex flex-col items-center space-y-4 md:hover:text-rose-400 active:text-rose-400 transition-colors duration-200"
                         href="/why-rust"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24">

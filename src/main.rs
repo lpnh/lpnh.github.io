@@ -1,3 +1,6 @@
+#![warn(clippy::pedantic, clippy::nursery)]
+#![allow(clippy::wildcard_imports)]
+
 mod app;
 
 use app::*;

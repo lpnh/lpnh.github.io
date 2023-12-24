@@ -1,5 +1,6 @@
 use leptos::*;
 
+#[allow(clippy::module_name_repetitions)]
 #[component]
 pub fn App() -> impl IntoView {
     view! {
@@ -19,9 +20,9 @@ fn Home() -> impl IntoView {
     view! {
         <div class="flex flex-col items-center justify-center space-y-24">
             // Greeting
-            <div class="md:space-y-8 space-y-6">
+            <div class="flex flex-col md:space-y-8 space-y-6">
                 <p class="tracking-widest md:text-2xl text-xl text-amber-200">"Hello, friend!"</p>
-                <div class="md:w-full w-96 mx-8">
+                <div class="flex flex-col px-8">
                     <p>"It looks like you've stumbled upon my personal website on the interwebs."</p>
                     <p>"It's still under construction, but feel free to explore."</p>
                 </div>

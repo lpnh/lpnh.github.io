@@ -21,10 +21,10 @@ fn Home() -> impl IntoView {
         <div class="flex flex-col items-center justify-center space-y-24">
             // Greeting
             <div class="flex flex-col md:space-y-8 space-y-6">
-                <p class="tracking-widest md:text-2xl text-xl text-amber-200">"Hello, friend!"</p>
+                <h1 class="tracking-widest md:text-xl text-lg text-rose-300">"Hello, friend!"</h1>
                 <div class="flex flex-col px-8">
-                    <p>"It looks like you've stumbled upon my personal website on the interwebs."</p>
-                    <p>"It's still under construction, but feel free to explore."</p>
+                    <p>"It looks like you've stumbled upon my personal website."</p>
+                    <p>"Below are some of the hobbies/side-projects I've been dedicating time to lately."</p>
                 </div>
             </div>
             // Main Content
@@ -48,8 +48,8 @@ fn Home() -> impl IntoView {
                         class="flex flex-col items-center space-y-4 md:hover:text-rose-300 active:text-rose-300 transition-colors duration-200"
                         href="https://veredas.shuttleapp.rs/"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 512 512">
-                            <path fill="currentColor" d="M212.125 20.156V59.72H39.53v128.84h30.316V293H39.623v190.03h165.064v-12.936H382v-45.5h95.281V264.53h-25.655V74.813H384.03V20.157H212.126zm18.688 18.688h134.53l-.03 35.968H297v79.126h81.28v46.625h18.69V135.25h-81.283V93.5h117.25v171.03H342v-63.06H224.656v9.343l-.03 70.187v9.344h75.467v-18.688h-56.75v-51.5h79.97l-.002 126.78l-185.937-.03V252.72h41.656v53.686h18.72V174.062h66.875v-18.687h-85.563v78.654h-60.375V293H88.53V188.562h57.44v-18.687H58.22v-91.47h153.905v30.94H111.437v18.686h119.375V38.845zM342 283.22h116.594v122.686H301.97v18.688h61.31v26.812H204.69v-48.812H110v18.687h76v43.064H58.312V311.72h60.376v53.874h9.343l114.782.03v65H261.5v-65H342v-31.529h66.75v33.844h18.688v-52.533H342V283.22z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24">
+                            <path fill="teal" d="M16.5 21c-3 0-4.19-4.24-5.45-8.72C10.14 9.04 9 5 7.5 5C4.11 5 4 11.93 4 12H2c0-.37.06-9 5.5-9c3 0 4.21 4.25 5.47 8.74C13.83 14.8 15 19 16.5 19c3.44 0 3.53-6.93 3.53-7h2c0 .37-.06 9-5.53 9"/>
                         </svg>
                         <div class="md:space-y-2 space-y-1">
                             <p class="tracking-wide md:w-64 md:text-3xl text-2xl">"Veredas"</p>
@@ -86,10 +86,10 @@ fn Home() -> impl IntoView {
                     </a>
                 </div>
             </div>
-            // Contact
+            // Other socials
             <div class="md:mb-16 mb-10 md:w-96">
-                <h3 class="md:text-lg text-base">"Socials"</h3>
-                <div class="mt-4 flex flex-row justify-around items-center space-x-6">
+                <h3 class="md:pb-6 pb-4 md:text-lg text-base">"Find me on:"</h3>
+                <div class="flex flex-row justify-around items-center space-x-6">
                     <a href="https://github.com/lpnh" target="_blank" class="justify-center items-center flex flex-col space-y-2 md:hover:text-rose-300 active:text-rose-300 transition-colors duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/>
@@ -118,7 +118,7 @@ fn Home() -> impl IntoView {
 fn Footer() -> impl IntoView {
     view! {
         <footer class="pb-0 m-auto left-0 right-0">
-            <div class="text-xs">"© 2023 lpnh"</div>
+            <div class="text-xs">"© 2024 lpnh"</div>
         </footer>
     }
 }

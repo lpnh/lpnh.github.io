@@ -18,13 +18,13 @@ pub fn App() -> impl IntoView {
 #[component]
 fn Home() -> impl IntoView {
     view! {
-        <div class="flex flex-col items-center justify-center space-y-24">
+        <div class="flex flex-col items-center justify-center">
             // Greeting
             <div class="flex flex-col md:space-y-8 space-y-6">
                 <h1 class="tracking-widest md:text-xl text-lg text-rose-300">"Hello, friend!"</h1>
                 <div class="flex flex-col px-8">
                     <p>"It looks like you've stumbled upon my personal website."</p>
-                    <p>"Below are some of the hobbies/side-projects I've been dedicating time to lately."</p>
+                    <p>"Below are some of my hobbies/side-projects."</p>
                 </div>
             </div>
             // Main Content
@@ -86,30 +86,6 @@ fn Home() -> impl IntoView {
                     </a>
                 </div>
             </div>
-            // Other socials
-            <div class="md:mb-16 mb-10">
-                <h3 class="md:pb-6 pb-4 md:text-lg text-base">"Find me on:"</h3>
-                <div class="flex flex-row items-center space-x-8">
-                    <a href="https://github.com/lpnh" target="_blank" class="justify-center items-center flex flex-col space-y-2 md:hover:text-rose-300 active:text-rose-300 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/>
-                        </svg>
-                        <p class="md:text-base text-sm">"github"</p>
-                    </a>
-                    /* <a href="https://www.linkedin.com/in/lpnh/" target="_blank" class="justify-center items-center flex flex-col space-y-2 md:hover:text-rose-300 active:text-rose-300 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/>
-                        </svg>
-                        <p class="md:text-base text-sm">"linkedin"</p>
-                    </a> */
-                    <a href="https://discordapp.com/users/371617418285416448" target="_blank" class="justify-center items-center flex flex-col space-y-2 md:hover:text-rose-300 active:text-rose-300 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="m22 24l-5.25-5l.63 2H4.5A2.5 2.5 0 0 1 2 18.5v-15A2.5 2.5 0 0 1 4.5 1h15A2.5 2.5 0 0 1 22 3.5V24M12 6.8c-2.68 0-4.56 1.15-4.56 1.15c1.03-.92 2.83-1.45 2.83-1.45l-.17-.17c-1.69.03-3.22 1.2-3.22 1.2c-1.72 3.59-1.61 6.69-1.61 6.69c1.4 1.81 3.48 1.68 3.48 1.68l.71-.9c-1.25-.27-2.04-1.38-2.04-1.38S9.3 14.9 12 14.9s4.58-1.28 4.58-1.28s-.79 1.11-2.04 1.38l.71.9s2.08.13 3.48-1.68c0 0 .11-3.1-1.61-6.69c0 0-1.53-1.17-3.22-1.2l-.17.17s1.8.53 2.83 1.45c0 0-1.88-1.15-4.56-1.15m-2.07 3.79c.65 0 1.18.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27m4.17 0c.65 0 1.17.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27Z"/>
-                        </svg>
-                        <p class="md:text-base text-sm">"discord"</p>
-                    </a>
-                </div>
-            </div>
         </div>
     }
 }
@@ -118,7 +94,9 @@ fn Home() -> impl IntoView {
 fn Footer() -> impl IntoView {
     view! {
         <footer class="pb-0 m-auto left-0 right-0">
-            <div class="text-xs">"© 2024 lpnh"</div>
+            <a href="https://github.com/lpnh" target="_blank" class="text-xs">
+                "github.com/lpnh"
+            </a>
         </footer>
     }
 }

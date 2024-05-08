@@ -1,32 +1,33 @@
-[tasks.clean-css]
-command = "rm"
-args = ["-f", "style/output.css"]
-
 [tasks.clean-dist]
 command = "trunk"
-args = ["clean", "--config", "Dev.toml"]
-
-[tasks.serve-dist]
-command = "trunk"
-args = ["serve", "--config", "Dev.toml"]
+args = ["clean", "--cargo"]
 
 [tasks.clean-release]
 command = "trunk"
-args = ["clean", "--config", "Release.toml"]
-
-[tasks.build-release]
-command = "trunk"
-args = ["build", "--config", "Release.toml", "--public-url", "/lpnh.github.io/"]
-
-[tasks.add-public-files]
-command = "sh"
-args = ["-c", "cp -r public/aux/* release/"]
+args = ["clean", "--cargo", "--dist", "release"]
 
 [tasks.run-dev]
-run_task = { name = ["clean-css", "clean-dist", "serve-dist"] }
+dependencies = ["clean-dist"]
+command = "trunk"
+args = ["serve", "--open"]
+
+[tasks.build-release]
+dependencies = ["clean-release"]
+command = "trunk"
+args = [
+    "build",
+    "--release",
+    "--minify",
+    "--dist",
+    "release",
+    "--public-url",
+    "/lpnh.github.io/",
+]
 
 [tasks.run-release]
-run_task = { name = ["clean-css", "clean-release", "build-release", "add-public-files"] }
+dependencies = ["build-release"]
+command = "sh"
+args = ["-c", "cp -r public/aux/* release/"]
 
 [tasks.update-pages]
 command = "git"

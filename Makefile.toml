@@ -24,10 +24,11 @@ args = [
     "/lpnh.github.io/",
 ]
 
+[tasks.cp-extra]
+script = ["cp -r public/extra/* release/"]
+
 [tasks.run-release]
-dependencies = ["build-release"]
-command = "sh"
-args = ["-c", "cp -r public/aux/* release/"]
+dependencies = ["build-release", "cp-extra"]
 
 [tasks.update-pages]
 command = "git"

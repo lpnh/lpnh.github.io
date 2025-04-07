@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::prelude::*;
 
 #[allow(clippy::module_name_repetitions)]
 #[component]
@@ -24,7 +24,7 @@ fn Home() -> impl IntoView {
                 <div class="flex flex-col px-10 md:space-y-4 space-y-2">
                     <p>"it looks like you've stumbled upon my personal website"</p>
                     <p>"i'm currently rethinking its purpose, so there’s not much to see here for now"</p>
-                    <p>"but hey, I can’t let you leave empty-handed, so here’s a puppy for you"</p>
+                    <p>"but hey, i can’t let you leave empty-handed, so here’s a puppy for you"</p>
                     <p>"hope you have a great day"</p>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 mod app;
 
 use app::*;
-use leptos::*;
+use leptos::{logging, mount};
 
 pub fn main() {
     _ = console_log::init_with_level(log::Level::Debug);
@@ -12,7 +12,5 @@ pub fn main() {
 
     logging::log!("coucou");
 
-    mount_to_body(|| {
-        view! { <App /> }
-    });
+    mount::mount_to_body(App);
 }
